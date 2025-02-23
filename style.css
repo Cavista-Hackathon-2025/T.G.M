@@ -291,7 +291,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 121px;
+    padding: 20px 12px;
   }
   
   .logo {
@@ -313,7 +313,7 @@
   
   .main-nav ul {
     display: flex;
-    gap: 140px;
+    gap: 50px;
     list-style-type: none;
   }
   
@@ -368,7 +368,9 @@
     border-radius: 15px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
-  
+  .cta-card :hover{
+    box-shadow: 10px 10px 20px rgba(36, 36, 36, 0.5);
+  }
   .cta-text,
   .service-text {
     font-family: "Manrope-Regular", Helvetica;
@@ -508,6 +510,287 @@
     .services-grid {
       grid-template-columns: 1fr;
       justify-items: center;
+    }
+  }
+  .services {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .services .div {
+    background-color: #ffffff;
+    width: 1920px;
+    height: 2366px;
+    position: relative;
+  }
+  
+  .services .frame {
+    position: absolute;
+    width: 1920px;
+    height: 1029px;
+    top: 0;
+    left: 0;
+    background-color: #3578c5;
+  }
+  
+  .services .text-wrapper {
+    position: absolute;
+    width: 380px;
+    top: 93px;
+    left: 141px;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 77px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .services .momo-studio {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    top: 341px;
+    left: 1177px;
+    object-fit: cover;
+  }
+  
+  .services .div-wrapper {
+    display: flex;
+    width: 387px;
+    height: 87px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: absolute;
+    top: 591px;
+    left: 137px;
+    background-color: #ffffff;
+    border-radius: 15px;
+  }
+  
+  .services .text-wrapper-2 {
+    position: relative;
+    width: fit-content;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #1e1e1e;
+    font-size: 34px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .services .have-you-had-a-check-wrapper {
+    display: flex;
+    width: 457px;
+    height: 413px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 2px 8px;
+    position: absolute;
+    top: 1271px;
+    left: 295px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0px 4px 4px #00000040;
+  }
+  
+  .services .have-you-had-a-check {
+    position: relative;
+    width: 295px;
+    font-family: "Manrope-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 44px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .services .frame-2 {
+    display: flex;
+    width: 457px;
+    height: 413px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 2px 8px;
+    position: absolute;
+    top: 1263px;
+    left: 1018px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0px 4px 4px #00000040;
+  }
+  
+  .services .copyright {
+    position: absolute;
+    width: 174px;
+    height: 35px;
+    top: 2259px;
+    left: 722px;
+  }
+  /* Original CSS code should be injected here */
+  
+  .services {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+  }
+  
+  .services-content {
+    max-width: 1920px;
+    width: 100%;
+    position: relative;
+  }
+  
+  .services-header {
+    width: 100%;
+    height: 1029px;
+    background-color: #3578c5;
+    padding: 93px 141px;
+    position: relative;
+  }
+  
+  .services-title {
+    font-family: "Inter-Regular", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 77px;
+    line-height: 1.2;
+    max-width: 380px;
+  }
+  
+  .services-image {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    top: 341px;
+    right: 243px;
+    object-fit: cover;
+  }
+  
+  .services-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 387px;
+    height: 87px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    text-decoration: none;
+    position: absolute;
+    bottom: 351px;
+    left: 137px;
+  }
+  
+  .services-cta-text {
+    font-family: "Inter-Regular", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    color: #1e1e1e;
+    font-size: 34px;
+  }
+  
+  .services-list {
+    display: flex;
+    justify-content: space-around;
+    padding: 234px 295px;
+  }
+  
+  .service-card {
+    display: flex;
+    width: 457px;
+    height: 413px;
+    align-items: center;
+    justify-content: center;
+    padding: 2px 8px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  
+  .service-title {
+    width: 295px;
+    font-family: "Manrope-Regular", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    color: #000000;
+    font-size: 44px;
+    text-align: center;
+    line-height: 1.2;
+  }
+  
+  .services-footer {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    font-size: 20px;
+  }
+  
+  .copyright-image {
+    width: 174px;
+    height: 35px;
+  }
+  
+  @media (max-width: 1200px) {
+    .services-header {
+      padding: 60px 80px;
+    }
+  
+    .services-image {
+      width: 400px;
+      height: 400px;
+      top: 280px;
+      right: 80px;
+    }
+  
+    .services-list {
+      flex-direction: column;
+      align-items: center;
+      padding: 100px 20px;
+    }
+  
+    .service-card {
+      margin-bottom: 40px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .services-title {
+      font-size: 60px;
+    }
+  
+    .services-image {
+      width: 300px;
+      height: 300px;
+      top: 220px;
+      right: 50px;
+    }
+  
+    .services-cta {
+      width: 300px;
+      height: 70px;
+      bottom: 280px;
+      left: 80px;
+    }
+  
+    .services-cta-text {
+      font-size: 28px;
+    }
+  
+    .service-card {
+      width: 100%;
+      max-width: 400px;
+    }
+  
+    .service-title {
+      font-size: 36px;
     }
   }
   
