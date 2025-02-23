@@ -25,13 +25,13 @@
   
   .HOME-PAGE .header {
     display: flex;
-    width: 1305px;
+    width: 1px;
     height: 119px;
-    align-items: center;
-    gap: 140px;
+    align-items: left;
+    gap: 14px;
     position: absolute;
     top: 0;
-    left: 121px;
+    left: 12px;
     background-color: transparent;
   }
   
@@ -438,7 +438,8 @@
   .footer {
     display: flex;
     justify-content: center;
-    padding: 20px 0;
+    padding: 10px 0;
+    font-size: 20px;
   }
   
   .copyright-image {

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SCT - Symptom Checker</title>
+  <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+</head>
+<body>
+  <header>
+    <h1>Welcome to SCT</h1>
+    <nav>
+      <a href="{% url 'logout' %}">Logout</a>
+    </nav>
+  </header>
+  <main>
+    <section class="symptom-form">
+      <h2>Enter Your Symptoms</h2>
+      <form method="post" action="{% url 'submit_symptoms' %}">
+        {% csrf_token %}
+        <div class="form-group">
+          <label for="symptoms">Symptoms:</label>
+          <textarea id="symptoms" name="symptoms" placeholder="Describe your symptoms here..." rows="5" required></textarea>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+    <section class="report-log">
+      <h2>Your Previous Reports</h2>
+      <ul>
+        {% for report in reports %}
+          <li>
+            <strong>Date:</strong> {{ report.created_at }}<br>
+            <strong>Symptoms:</strong> {{ report.symptoms }}<br>
+            <strong>Prediction:</strong> {{ report.predicted_illness }}
+          </li>
+        {% empty %}
+          <li>No reports available.</li>
+        {% endfor %}
+      </ul>
+    </section>
+  </main>
+  <script src="{% static 'js/dashboard.js' %}"></script>
+</body>
+</html>
