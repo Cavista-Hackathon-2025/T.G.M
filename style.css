@@ -291,7 +291,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+<<<<<<< HEAD
   padding: 20px 121px;
+=======
+  padding: 20px 12px;
+>>>>>>> e160900efac19d4934b1275728fe999c108c4ed2
 }
 
 .logo {
@@ -340,7 +344,11 @@
   position: absolute;
   width: 730px;
   top: 315px;
+<<<<<<< HEAD
   left: 152px;
+=======
+  left: 15px;
+>>>>>>> e160900efac19d4934b1275728fe999c108c4ed2
   font-family: "Consolas-Regular", Helvetica;
   font-size: 50px;
   color: #ffffff;
@@ -351,7 +359,11 @@
   width: 500px;
   height: 500px;
   top: 185px;
+<<<<<<< HEAD
   right: 269px;
+=======
+  right: 2px;
+>>>>>>> e160900efac19d4934b1275728fe999c108c4ed2
   object-fit: cover;
 }
 
