@@ -1,0 +1,86 @@
+import logging
+from django.shortcuts import render, redirect
+from django.contrib.auth.decorators import login_required
+from .models import MedicalReport
+
+logger = logging.getLogger(__name__)
+
+@login_required
+def dashboard(request):
+    """
+    Display the dashboard with the symptom submission form and previous reports.
+    """
+    reports = MedicalReport.objects.filter(user=request.user).order_by('-created_at')
+    return render(request, 'health_user_dashboard.html', {'reports': reports})
+
+@login_required
+def submit_symptoms(request):
+    """
+    Handle the symptom form submission:
+      - Logs the input,
+      - Calls the AI API (placeholder) to predict the possible illness,
+      - Saves the medical report.
+    """
+    if request.method == 'POST':
+        symptoms = request.POST.get('symptoms')
+        logger.info(f"User {request.user.email} submitted symptoms: {symptoms}")
+        
+        # Placeholder for AI prediction integration
+        # Replace the following line with your API call/integration code
+        predicted_illness = "Unknown"  # This is a dummy placeholder
+        
+        # Save the medical report log
+        MedicalReport.objects.create(
+            user=request.user,
+            symptoms=symptoms,
+            predicted_illness=predicted_illness
+        )
+        
+        # Redirect to the dashboard to view the updated report log
+        return redirect('dashboard')
+    
+    # If not a POST request, simply render a submission page (optional)
+    return render(request, 'submit_symptoms.html')
+import logging
+from django.shortcuts import render, redirect
+from django.contrib.auth.decorators import login_required
+from .models import MedicalReport
+
+logger = logging.getLogger(__name__)
+
+@login_required
+def dashboard(request):
+    """
+    Display the dashboard with the symptom submission form and previous reports.
+    """
+    reports = MedicalReport.objects.filter(user=request.user).order_by('-created_at')
+    return render(request, 'health_user_dashboard.html', {'reports': reports})
+
+@login_required
+def submit_symptoms(request):
+    """
+    Handle the symptom form submission:
+      - Logs the input,
+      - Calls the AI API (placeholder) to predict the possible illness,
+      - Saves the medical report.
+    """
+    if request.method == 'POST':
+        symptoms = request.POST.get('symptoms')
+        logger.info(f"User {request.user.email} submitted symptoms: {symptoms}")
+        
+        # Placeholder for AI prediction integration
+        # Replace the following line with your API call/integration code
+        predicted_illness = "Unknown"  # This is a dummy placeholder
+        
+        # Save the medical report log
+        MedicalReport.objects.create(
+            user=request.user,
+            symptoms=symptoms,
+            predicted_illness=predicted_illness
+        )
+        
+        # Redirect to the dashboard to view the updated report log
+        return redirect('dashboard')
+    
+    # If not a POST request, simply render a submission page (optional)
+    return render(request, 'submit_symptoms.html')
